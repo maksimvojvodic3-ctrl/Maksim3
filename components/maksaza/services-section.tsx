@@ -11,16 +11,19 @@ import {
 } from 'lucide-react'
 import { SERVICE_HIGHLIGHTS, WHY_US } from '@/lib/maksaza-data'
 
-const SITE_URL = 'https://maksaza-sajt.vercel.app'
 const SHARE_TEXT =
   'MAKSAŽA — premium masaža & wellness. Pogledaj cenovnik, rezerviši termin i osvoji bonus popust!'
+
+function getSiteUrl() {
+  return typeof window === 'undefined' ? '' : window.location.href
+}
 
 export function ServicesSection() {
   const [copied, setCopied] = useState(false)
 
   const copyLink = async () => {
     try {
-      await navigator.clipboard.writeText(SITE_URL)
+      await navigator.clipboard.writeText(getSiteUrl())
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
@@ -92,7 +95,7 @@ export function ServicesSection() {
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
             <a
-              href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_TEXT} ${SITE_URL}`)}`}
+              href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_TEXT} ${getSiteUrl()}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground transition-opacity hover:opacity-90"
@@ -100,7 +103,7 @@ export function ServicesSection() {
               <MessageCircle className="size-4" /> WhatsApp
             </a>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL)}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(getSiteUrl())}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-bold text-foreground transition-colors hover:bg-muted"
