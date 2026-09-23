@@ -14,8 +14,10 @@ import { SERVICE_HIGHLIGHTS, WHY_US } from '@/lib/maksaza-data'
 const SHARE_TEXT =
   'MAKSAŽA — premium masaža & wellness. Pogledaj cenovnik, rezerviši termin i osvoji bonus popust!'
 
+const SITE_URL = 'https://maksaza-sajt.vercel.app'
+
 function getSiteUrl() {
-  return typeof window === 'undefined' ? '' : window.location.href
+  return SITE_URL
 }
 
 export function ServicesSection() {
