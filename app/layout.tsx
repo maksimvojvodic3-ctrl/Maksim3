@@ -121,7 +121,6 @@ export default function RootLayout({
                 'Premium masaža i wellness — masaža leđa, nogu, stopala, ruku, lica i kombo paket. Dolazak na adresu.',
               image: 'https://maksaza-sajt.vercel.app/maksaza-hero.png',
               url: 'https://maksaza-sajt.vercel.app',
-              email: 'salon.maksaza@gmail.com',
               areaServed: 'Banovo brdo, Beograd',
               address: {
                 '@type': 'PostalAddress',

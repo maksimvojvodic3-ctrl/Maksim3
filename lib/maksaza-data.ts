@@ -46,7 +46,6 @@ export const INFO = {
   location: 'Banovo brdo i okolina',
   hours: 'Subota 10:00–14:00, po prethodnoj rezervaciji',
   loyalty: 'Popust za redovne klijente: 10% popusta nakon 5. dolaska.',
-  email: 'salon.maksaza@gmail.com',
 } as const
 
 // CENOVNIK — pojedinačne usluge (din/min, po uzrastu)
@@ -219,12 +218,6 @@ export const WHY_US = [
   '10% popusta za redovne klijente nakon 5. dolaska',
 ]
 
-// Galerija ambijenta
-export const GALLERY = [
-  { src: '/maksaza-gallery-1.png', alt: 'Opuštajuća masaža leđa u MAKSAŽA salonu' },
-  { src: '/maksaza-gallery-2.png', alt: 'Spa ambijent — peškiri, sveća i eukaliptus' },
-  { src: '/maksaza-gallery-3.png', alt: 'Masaža stopala uz aroma ulja' },
-]
 
 // Utisci klijenata — prave recenzije koje klijenti sami ostave (čuva se lokalno)
 export type Review = {
@@ -267,6 +260,6 @@ export const FAQ = [
   },
   {
     q: 'Kako da vas kontaktiram?',
-    a: 'Pišite nam na salon.maksaza@gmail.com ili kroz „AI Menadžer" chat dole desno za brze informacije o cenama i terminima.',
+    a: 'Za brze informacije o cenama i terminima koristite „AI Menadžer" chat dole desno.',
   },
 ]

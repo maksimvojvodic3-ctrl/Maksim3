@@ -38,9 +38,9 @@ function answer(raw: string): string {
     return `Radno vreme: ${INFO.hours}. Dostupni termini za rezervaciju: ${TIME_SLOTS.join(', ')}.`
   }
 
-  // Email / kontakt
+  // Kontakt bez javnog emaila
   if (/(email|mejl|mail|kontakt|javim|poruk)/.test(q)) {
-    return `Možete nas kontaktirati na email: ${INFO.email}. Rado ćemo odgovoriti i potvrditi termin.`
+    return 'Za informacije o cenama i terminima koristite ovaj AI Menadžer chat ili formu za rezervaciju.'
   }
 
   // Popust / lojalnost

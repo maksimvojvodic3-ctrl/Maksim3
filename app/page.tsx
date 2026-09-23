@@ -14,7 +14,6 @@ import {
   Clock,
   Home,
   BadgePercent,
-  Mail,
 } from 'lucide-react'
 import {
   INFO,
@@ -33,14 +32,12 @@ import { AuthModal, type AuthResult } from '@/components/maksaza/auth-modal'
 import { Modal } from '@/components/maksaza/modal'
 import { AiManager } from '@/components/maksaza/ai-manager'
 import { ServicesSection } from '@/components/maksaza/services-section'
-import { Gallery } from '@/components/maksaza/gallery'
 import { Reviews } from '@/components/maksaza/reviews'
 import { Faq } from '@/components/maksaza/faq'
 
 const NAV = [
   { id: 'usluge', label: 'Usluge' },
   { id: 'cenovnik', label: 'Cenovnik' },
-  { id: 'galerija', label: 'Galerija' },
   { id: 'utisci', label: 'Utisci' },
   { id: 'faq', label: 'Pitanja' },
   { id: 'info', label: 'Info' },
@@ -314,11 +311,6 @@ export default function Page() {
           <PricingTables />
         </section>
 
-        {/* GALERIJA */}
-        <section id="galerija" className="scroll-mt-24">
-          <Gallery />
-        </section>
-
         {/* UTISCI KLIJENATA */}
         <section id="utisci" className="scroll-mt-24">
           <Reviews />
@@ -353,12 +345,6 @@ export default function Page() {
                 </p>
               </div>
             ))}
-          </div>
-          <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl border border-primary/30 bg-primary/5 px-4 py-3 text-sm font-medium text-primary">
-            <Mail className="size-4" />
-            <a href={`mailto:${INFO.email}`} className="hover:underline">
-              {INFO.email}
-            </a>
           </div>
         </section>
 
@@ -429,8 +415,7 @@ export default function Page() {
             </span>
           </div>
           <p className="text-sm text-muted-foreground">
-            Premium masaža & wellness · {INFO.location} · Subota 10:00–14:00 ·{' '}
-            {INFO.email}
+            Premium masaža & wellness · {INFO.location} · Subota 10:00–14:00
           </p>
         </div>
       </footer>
